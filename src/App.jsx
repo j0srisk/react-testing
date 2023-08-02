@@ -1,9 +1,22 @@
-function App() {
-  return (
-    <div>
-      <h1 className="font-bold">Template React Tailwind</h1>
-    </div>
-  );
-}
+// App.jsx
+
+import React, { useState } from 'react';
+
+const App = () => {
+	const [heading, setHeading] = useState('Magnificent Monkeys');
+
+	const clickHandler = () => {
+		setHeading('Radical Rhinos');
+	};
+
+	return (
+		<>
+			<button type="button" onClick={clickHandler}>
+				Click Me
+			</button>
+			<h1>{heading}</h1>
+		</>
+	);
+};
 
 export default App;
